@@ -1,8 +1,8 @@
-package index;
+	package index;
 
 import java.util.Scanner;
 
-public class Index {
+public class App {
 
 	public static void main(String[] args) {
 		displayMenu();
@@ -28,25 +28,9 @@ public class Index {
 		System.out.println("10. Display All Records");
 		System.out.println("11. Exit Program");
 		
-
-		
 		int option = in.nextInt();
 		in.nextLine();
-		/*
- •	Add new entries 
-•	Search for an existing entry
-•	Search by first name *
-•	Search by last name *
-•	Search by full name *note name is not unique therefore the result should be an array of Person Objects.
-•	Search by telephone number
-•	Search by city or state
-•	Delete a record for a given telephone number
-•	Update a record for a given telephone number
-•	Show all records in asc order *note you will need to research sorting on an array.
-•	An option to exit the program 
 
-		 */
-		
 		switch (option) {
 		case 1:
 			System.out.println("First Name: ");
@@ -55,39 +39,105 @@ public class Index {
 			break;
 		case 2:
 			System.out.println("Last Name: ");
+			String lname = in.nextLine();
+			searchLastName(lname);
 			break;
 		case 3:
 			System.out.println("Full Name: ");
+			fname = in.nextLine();
+			lname = in.nextLine();
+			searchFullName(fname, lname);
 			break;
 		case 4:
 			System.out.println("Phone Number: ");
+			String phonenumber = in.nextLine();
+			searchPhoneNumber(phonenumber);
 			break;
 		case 5:
 			System.out.println("City: ");
+			String city = in.nextLine();
+			searchCity(city);
 			break;
 		case 6:
 			System.out.println("State: ");
+			String state = in.nextLine();
+			searchState(state);
 			break;
 		case 7:
 			System.out.println("New Entry");
+			newEntry();
 			break;
 		case 8:
 			System.out.println("Select an Entry to Delete");
+			deleteEntry();
 			break;
 		case 9:
 			System.out.println("Select an Entry to Update");
+			updateEntry();
 			break;
 		case 10:
 			System.out.println("Displaying All Records");
+			displayRecords();
 			break;
 		case 11:
 			System.out.println("Exiting Program");
+			exitProgram();
 			break;
 		default:
 			System.out.println("Invalid Input");
 			break;
 		}
 		in.close();
+	}
+
+	private static void exitProgram() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void displayRecords() {
+		Phonebook display = new Phonebook(0);
+		System.out.println(display);
+	}
+
+	private static void updateEntry() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void deleteEntry() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void newEntry() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void searchState(String state) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void searchCity(String city) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void searchPhoneNumber(String phoneNumber) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void searchFullName(String fname, String lname) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void searchLastName(String lname) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private static void searchFirstName(String fname) {
